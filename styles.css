@@ -1,0 +1,163 @@
+
+
+h1{
+  font-size: 3.8rem;
+}
+
+h2{
+  font-size: 2.8rem;
+}
+
+h3{
+  font-size: 1.8rem;
+}
+h1,h2,h3{
+  text-align: center;
+}
+
+.titulo span{
+  font-size: 2rem;
+}
+
+:root{
+  --blanco: #ffffff;
+  --oscuro: #212121;
+  --primario: #ffc107;
+  --secundario: #0097a7;
+  --gris: #757575;
+  --grisClaro:#b6b6b6;
+}
+html{
+  font-size: 62.5%;
+}
+body{
+  font-size: 16px;
+  font-family: 'krub',sans-serif;
+  background:linear-gradient(to top,var(--grisClaro)0%,var(--blanco)100%);
+}
+.navegacion-principal{
+
+ padding: 1rem;
+ display:flex; /* flexbox esta diseñado para alinear elementos en tus diseños*/
+/*jutify-content es para filas / align-items es para columnas (flex-direction)*/
+justify-content: space-between;
+font-weight: bold;
+font-size: 2rem;
+flex-direction:column;
+align-items: center;
+
+}
+@media(min-width: 768px){
+  .navegacion-principal{
+    flex-direction: row;
+  }
+}
+
+
+/*al poner el cursor en el hipervinculo*/
+.navegacion-principal a:hover{
+background-color: var(--primario);
+color :var(--oscuro)
+
+}
+
+
+.navegacion-principal a{
+ color: var(--blanco);
+ text-decoration: none;/*remueve el estilo subrayado en el texto*/
+
+}
+.contenedor{
+  max-width: 120rem; /*1200 pixeles por que 1 rem es igual a 10px*/
+
+margin: 0 auto;
+}
+
+.nav-bg{
+  background-color: var(--secundario);
+}
+
+
+/*recomendado
+480 px para mobiles
+768 px para tablets
+*/
+@media(min-whidh:740px){
+  body{
+    background-color: green;
+  }
+}
+
+
+@media(min-whidh:768px){
+  body{
+    background-color: green;
+  }
+}
+
+.hero{
+  background-image: url(../img/hero.jpg);/*es para regresar un nivel de directorio ya que la carpeta "img" esta fuera de css*/
+  background-size: cover;
+  height: 450px;/*Alto del elemento hero*/
+  position: relative;/*para manipular la pocision.El padre siempredebe de ser relativo*/
+
+}
+
+.contenido-hero{
+  position: absolute;
+  background-color: rgba(0,0,0,.7);
+  width: 100%;
+  height: 100%;
+ /*alinear vertical y horizontalmente*/
+ display: flex;
+ flex-direction: column;
+ align-items: center;
+ color: var(--blanco);
+
+}
+.contenido-hero p,
+.contenido-hero h2{
+  color: var(--blanco)
+}
+
+
+
+.titulo span{
+  font-size: 2rem;
+}
+
+/* Estilos para el botón Contactar */
+.btn-contactar {
+  background-color: #26939f; /* Color de fondo */
+  color: white; /* Color del texto */
+  padding: 15px 30px; /* Espaciado interno (arriba/abajo, izquierda/derecha) */
+  text-align: center; /* Centrar el texto */
+  text-decoration: none; /* Quitar subrayado */
+  display: inline-block;
+  font-size: 16px; /* Tamaño del texto */
+  border-radius: 5px; /* Bordes redondeados */
+  border: none; /* Sin borde */
+  cursor: pointer; /* Cambia el cursor al pasar sobre el botón */
+  transition: background-color 0.3s ease; /* Transición suave al cambiar de color */
+
+}
+
+.btn-contactar:hover {
+  background-color:#26939f; /* Color al pasar el mouse por encima */
+}
+
+/* Contenedor para centrar el botón */
+.btn-contacto-container {
+  margin-top: 20px; /* Espaciado superior */
+  text-align: center; /* Centra el botón horizontalmente */
+}
+
+@media(max-width:480px){
+  .btn-contactar{
+
+  }
+}
+.ubicacion{
+  display:flex;
+  align-items:flex-end;
+}
